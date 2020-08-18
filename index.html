@@ -13,7 +13,7 @@
             src="https://kit.fontawesome.com/c939d0e917.js"
             crossorigin="anonymous"
         ></script>
-        <title>repl.it</title>
+        <title>Like Google Doc</title>
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
     <body class="text-center container">
@@ -22,7 +22,7 @@
             <div class="row">
                 <div class="col">
                     <button id="bold" type="button" class="btn btn-light">
-                        Bolb
+                        Bold
                     </button>
                     <button id="italic" type="button" class="btn btn-light">
                         Italic
@@ -62,6 +62,7 @@
                             class="form-control"
                             id="text-input"
                             rows="3"
+                            onkeydown="updateText()"
                         ></textarea>
                     </div>
                 </div>
