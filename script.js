@@ -7,7 +7,6 @@
 
 /**
  * Update the output text as a user types in the textarea
- * HINT: Use the onkeydown function inside HTML
  */
 function updateText() {
     let text = document.getElementById("text-input").value;
@@ -16,10 +15,6 @@ function updateText() {
 
 /**
  * Toggle the bold class for the output text
- * HINT: Use the onclick function insite HTML
- * HINT: Look into using this keyword
- * HINT: Use the classList property
- * HINT: Toggle .active class for the button
  */
 function makeBold(elem) {
     elem.classList.toggle("active");
@@ -36,13 +31,16 @@ function makeItalic(elem) {
 
 /**
  * Toggle the underline class for the output text
- * HINT: Toggle the .active class for the button
- * HINT: Use the classList property
- * HINT: Use contains, remove, and add functions
  */
 function makeUnderline(elem) {
     elem.classList.toggle("active");
-    document.getElementById("text-output").classList.toggle("underline");
+    let formattedText = document.getElementById("text-output");
+
+    if (formattedText.classList.contains("underline")) {
+        formattedText.classList.remove("underline");
+    } else {
+        formattedText.classList.add("underline");
+    }
 }
 
 /**
